@@ -6,9 +6,14 @@ int main (){
 
     std::vector <int> numbers;
     int val;
-    
-    while (std::cin >> val)
+
+    std::ifstream ifs;
+    ifs.open("input.txt");
+
+    while (ifs >> val)
         numbers.push_back(val);
+
+    ifs.close();
 
     std::ofstream ofs;
     ofs.open ("invertido.txt");
