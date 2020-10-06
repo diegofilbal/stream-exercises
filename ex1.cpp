@@ -2,38 +2,40 @@
 #include <iomanip>
 #include <vector>
 
-void printHeader (const std::vector <std::string> &fields);
-int getInteger (std::string msg_);
+using namespace std;
+
+void printHeader (const vector <string> &fields);
+int getInteger (string msg_);
 
 int main (){
 
-    std::vector <std::string> fieldNames = { "ITEM", "QUANTIDADE", "VALOR UNITARIO"};
+    vector <string> fieldNames = { "ITEM", "QUANTIDADE", "VALOR UNITARIO"};
     printHeader (fieldNames);
 
     return EXIT_SUCCESS;
 }
 
-void printHeader (const std::vector <std::string> &fields){
+void printHeader (const vector <string> &fields){
 
-    for (std::string field : fields)
-        std::cout << "+" << std::setw (field.length() + 3) << std::setfill('-');
+    for (string field : fields)
+        cout << "+" << setw (field.length() + 3) << setfill('-');
     
-    std::cout << "+" << std::endl;
+    cout << "+" << endl;
 
-    for (std::string field : fields)
-        std::cout << "| " << field << " ";
+    for (string field : fields)
+        cout << "| " << field << " ";
     
-    std::cout << "|" << std::endl;
+    cout << "|" << endl;
 
-    for (std::string field : fields)
-        std::cout << "+" << std::setw (field.length() + 3) << std::setfill('-');
+    for (string field : fields)
+        cout << "+" << setw (field.length() + 3) << setfill('-');
     
-    std::cout << "+" << std::endl;
+    cout << "+" << endl;
 
 }
 
-int getInteger (std::string msg_){
+int getInteger (string msg_){
 
     
-    std::cout << "Insira  o número: ";
+    cout << "Insira  o número: ";
 }
