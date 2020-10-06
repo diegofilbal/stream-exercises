@@ -2,12 +2,14 @@
 #include <vector>
 #include <fstream>
 
+using namespace std;
+
 int main (){
 
-    std::vector <int> numbers;
+    vector <int> numbers;
     int val;
 
-    std::ifstream ifs;
+    ifstream ifs;
     ifs.open("input_ex2.txt");
 
     while (ifs >> val)
@@ -15,7 +17,7 @@ int main (){
 
     ifs.close();
 
-    std::ofstream ofs;
+    ofstream ofs;
     ofs.open ("output_ex2.txt");
 
     for (int i{0}; i < (int) numbers.size(); i++){
